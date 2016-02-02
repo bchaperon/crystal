@@ -1,0 +1,11 @@
+meteor mongo --url
+mongoexport --host 127.0.0.1:3001 --db meteor --collection cards --out ../cards.backup.json
+
+meteor mongo --url crystal.meteor.com
+mongoimport --host production-db-a3.meteor.io:27017 --db crystal_meteor_com --collection cards --drop --file ../cards.backup.json -u LOGIN -p PASSWORD
+
+mongoexport --host 127.0.0.1:3001 --db meteor --collection cards --out ../cards.backup.json
+
+
+
+mongoimport --host 127.0.0.1:3001 --db meteor --collection cards --drop --file ../cards.backup.json

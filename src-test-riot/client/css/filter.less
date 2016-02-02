@@ -1,0 +1,26 @@
+@import 'common.import.less';
+
+.filter {
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.filter__name {
+  flex: 0 1 auto;
+  min-width: 4em;
+  padding: 0.5em;
+  //background-color: yellow;
+}
+
+.filter__list {
+  flex: 1 1 auto;
+
+  margin: 0;
+  padding: 0.5em;
+  list-style-type: none;
+
+  & > li {
+    display: inline-block;
+  }
+}

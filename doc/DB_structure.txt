@@ -1,0 +1,54 @@
+Collection "cardSets"
+- _id : crystals, prophecies, fates
+- rank
+- name : call of the crystals, dark prophecies, shattered fates
+- prefix : se, ex, sf
+- numberOfCards
+- actualNumberOfCards
+
+Collection "cards"
+Champs communs à toutes les cartes
+- _id : reference de la carte (se001, ex150...)
+- rank : se001 = 1, ex150 = 1150, sf042 = 2042
+- cardSet
+- rankInCardSet
+- name
+- type : hero, ally, ability, item
+- subType
+- faction : human, shadow, neutral
+- classes : liste parmi (warrior, hunter, mage, priest, rogue, wulven, elemental, neutral)
+- castingCost
+- attack / def
+- durability
+- description
+- unique : bool
+- restricted : bool
+- rarity : hero, common, uncommon, rare, epic, legendary
+- tags
+
+Pour les hero
+- subType = null
+- castingCost = null
+- unique = null
+- health = depend de la classe
+- rarity = hero
+
+Pour les alliés
+- allyType : none, twilight, templar, ravager, wulven, aldmor, undead, homunculus, Yari
+- attack
+- health
+
+Pour les abilities
+- abilityType : none, support, attachment
+
+Pour les items
+- itemType : artifact, trap, armor, weapon
+- durability
+
+Pour les item weapon
+- attack
+- durability
+
+Pour les item armor
+- defense
+- durability

@@ -1,0 +1,153 @@
+@import "common.lessimport";
+
+.card-browser-container {
+  max-width: @widthXL;
+  margin-right: auto; 
+  margin-left: auto; 
+}
+
+// a card-item can be a vignette or a card image
+// by default, there are block, they stack, one per 'line'
+// there are supposed to be <div>, so there is nothing to do
+.card-item {
+  display: block;
+}
+
+// we limit the images width, and center them
+.card-item-image {
+  position: relative; // to use absolute position inside the item
+  max-width: @maxCardWidth;
+  min-height: 4em;
+  margin: @space auto;
+}
+
+.card-vignette {
+	border-top: @borderStyle;
+}
+
+// if we have enough space
+// the items become inline blocks, with fixed width
+@media (min-width: 30em) {
+  .card-item {
+    display: inline-block;
+    vertical-align: top;
+  	margin: 0 0 @space @space;
+    
+    .boxSizingBorderBox();
+    width: @cardWidth;
+
+    .borderRadius();
+    overflow: hidden;
+  }
+  
+  .card-vignette {
+  	border: @borderStyle;
+  }
+  
+  .vignette-description {
+    min-height: 3em;
+  }
+}
+
+
+// ----------------------------------------------
+// inside a card item
+
+.card-item-image > .add-remove-card-ex {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  bottom: 0;
+  z-index: 10;
+    
+  border: 1px @darkColor solid;
+  .borderRadiusEx(@space, @space, 0, 0);
+  padding: @smallSpace;
+  background-color: @lightColor;
+}
+
+
+// ----------------------------------------------
+// inside a vignette item
+
+.card-vignette .add-remove-card-ex {
+  float: right;
+  margin-left: @smallSpace;
+}
+
+.vignette-casting-cost {
+  float: left;
+  padding: @space;
+	background-color: @lightColor;
+  .borderRadiusEx(0, 0, @space, 0);
+}
+
+.vignette-att-def {
+  float: right;
+  padding: @space;
+	background-color: @lightColor;
+  .borderRadiusEx(0, 0, 0, @space);
+}
+
+.vignette-name {
+  padding: @space 0;
+	background-color: @darkColor;
+  text-align: center;
+  & > a {
+    color: @textOnDarkColor; 
+  }
+}
+
+.vignette-type {
+  margin: @space 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.vignette-tags {
+  font-style: italic;
+}
+
+
+// ----------------------------------------------
+// display cards in a table
+
+.card-list-table {
+  @media (max-width: @widthS) {
+    .description-cell, .rarity-cell {
+      display: none;
+    }
+  }
+
+  @media (max-width: @widthL) {
+    .reference-cell, .tags-cell {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @widthXL) {
+  .card-browser-container .card-list-table {
+    border-left: @borderStyle;
+    border-right: @borderStyle;
+  }
+}
+
+// ----------------------------------------------
+// buttons to add or remove cards from the deck
+
+.add-remove-card {
+	text-align: center;
+  white-space: nowrap;
+
+  .quantity {
+    display: inline-block;
+    min-width: 1em;
+    margin: 0 @smallSpace;
+  	font-weight: bold;
+  }
+  
+  .add, .remove, .choose {
+    font-size: 80%;
+  }
+}

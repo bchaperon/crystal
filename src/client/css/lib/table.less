@@ -1,0 +1,62 @@
+@import "../common.lessimport";
+
+// a table with a header row, and rows of data
+.std-table {
+  width: 100%;
+  .boxSizingBorderBox();
+  
+	border-collapse: collapse;
+	border-bottom: @borderStyle;
+	
+	th {
+		background-color: @darkColor;
+		color: @textOnDarkColor;
+		padding: @space @smallSpace;
+		font-weight: normal;
+	}
+	
+	tbody {
+		tr:nth-child(even) {
+			background-color: @lightColor;
+		}
+	}
+
+	td {
+		padding: @space @smallSpace;
+	}
+}
+
+// a table to display key and values
+.key-value-table {
+	width: 100%;
+  .boxSizingBorderBox();
+  
+  border-collapse: collapse;
+
+	thead {
+		text-align: center;
+	}
+  
+  tbody {
+    border-top: @borderStyle;
+    
+    tr {
+      border-bottom: @borderStyle;
+    }
+    
+  	th {
+      padding: @space @smallSpace;
+  		text-align: right;
+      background-color: @lightColor;
+      font-weight: normal;
+  	}
+
+    td {
+      padding: @space @smallSpace;
+    }
+  }
+  
+	tfoot {
+		text-align: center;
+	}
+}

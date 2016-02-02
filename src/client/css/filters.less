@@ -1,0 +1,59 @@
+@import "common.lessimport";
+
+
+.filter-container {
+  margin: @space 0;
+  border-bottom: @borderStyle;
+}
+
+.filter {
+	border-top: @borderStyle;
+
+	& > ul {
+		display: inline;
+		list-style-type: none;
+		padding: @space @space @space 0;
+		margin: 0px;
+	}
+
+	& > ul > li {
+		display: inline-block;
+    margin-left: @smallSpace;
+	}
+
+	label {
+		text-transform: capitalize;
+	}
+}
+
+
+@media screen and (min-width: @widthS) {
+  .filter-container {
+    margin: 0;
+    border: 0;
+  }
+  
+  .filter {
+  	display: inline-block;
+  	border: @borderStyle;
+  	margin: @space 0 0 @space;
+
+    .borderRadius();
+    overflow: hidden;
+  }
+}
+
+.filter-title {
+	display: inline-block;
+  min-width: 4em;
+  padding: @space;
+  background-color: @lightColor;
+	text-transform: capitalize;
+  text-align: right;
+}
+
+.tag-filter {
+  & > input {
+    margin: 0 @smallSpace;
+  }
+}

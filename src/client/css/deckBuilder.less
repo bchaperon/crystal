@@ -1,0 +1,46 @@
+@import "common.lessimport";
+
+.choose-hero-container {
+  max-width: @widthXL;
+  margin: 0 auto;
+}
+
+.deck-builder-container {
+  max-width: @widthXL;
+}
+
+.deck-builder-aside {
+  max-width: @widthM - (2 * @space);
+  margin: 0 auto;
+}
+
+@media (min-width: @widthS) {
+  .deckActionInDeckBuilder  {
+    text-align: center;
+  }
+}
+
+@media (min-width: @widthXL) {
+  .deck-builder-container {
+    margin-left: @deckInfoWidth;
+  }
+
+  .deck-builder-aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    z-index: 5;
+    margin: 0;
+    width: @deckInfoWidth;
+    .boxSizingBorderBox();
+    border-right: @borderStyle;
+  }
+}
+
+@media (min-width: (@widthXL + @deckInfoWidth)) {
+  .deck-builder-container .card-list-table {
+    border-right: @borderStyle;
+  }
+}

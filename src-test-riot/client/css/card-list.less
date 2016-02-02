@@ -1,0 +1,58 @@
+@import 'common.import.less';
+
+//
+// list of tiles
+//
+.card-list-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+// TODO : adjust the min-width of the media queries
+.card-list-tiles__item {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  border-top: 1px solid @primary-color-dark;
+
+  @media (min-width: @width-xs) {
+    flex: 1 1 50%;
+    border-right: 1px solid @primary-color-dark;
+  }
+  @media (min-width: @width-sm) {
+    flex: 1 1 33.333%;
+  }
+  @media (min-width: @width-md) {
+    flex: 1 1 25%;
+  }
+  @media (min-width: @width-lg) {
+    flex: 1 1 20%;
+  }
+}
+
+//
+// list of images
+//
+.card-list-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.card-list-images__item {
+  flex: 0 0 @cardWidth;
+  margin: 0.5em 0.2em;
+  box-sizing: border-box;
+}
+
+.card-list-images__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+}

@@ -1,0 +1,142 @@
+@import "../common.lessimport";
+
+body {
+	margin: 0;
+	padding: 0;
+	color: @darkColor;
+	background-color: @bodyBackgroundColor;
+}
+
+footer {
+  clear: both;
+  margin-top: 15em;
+}
+
+a {
+	color: @darkColor;
+}
+
+h1 {
+  margin: @space 0;
+	text-align: center;	
+  font-size: 1.5em;
+}
+
+h2 {
+  margin: @space 0;
+	text-align: center;
+  font-size: 1.3em;
+}
+
+select {
+	text-transform: capitalize;
+}
+
+input[type="number"] {
+	text-align: right;
+}
+
+// a space between a checkbox and its label
+input[type="checkbox"] {
+	margin-right: @smallSpace;
+}
+
+fieldset {
+  margin: 0;
+  border: @borderStyle;
+  padding: @space;
+}
+
+legend {
+  padding: 0 @smallSpace;
+}
+
+
+// ----------------------------------------------
+// useful css classes
+
+// a simple class to emphasis error text
+.error, em {
+  color: @errorColor;
+}
+
+.tags {
+  font-style: italic;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.selectable {
+  cursor: pointer;
+  &:hover, &:focus {
+    background-color: @hoverColor;
+  }
+}
+
+.selected {
+  background-color: @darkColor;
+  color: @textOnDarkColor;
+}
+
+// extend pure buttons
+.button-danger, .button-warning, .button-secondary {
+  color: white;
+  border-radius: 2px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-danger {
+  background: @errorColor;
+}
+
+.button-warning {
+  background: rgb(223, 117, 20); // orange
+}
+
+.button-secondary {
+  background: rgb(66, 184, 221); // light blue
+}
+
+.text-block {
+  display: inline-block;
+  text-align: baseline;
+  white-space: nowrap;
+}
+
+.clear-float-after {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+// block formating context (bfc) : to contain float elements
+.bfc {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.centered-medium-width {
+  margin: 0 auto;
+  padding: @bigSpace @space;
+  max-width: @widthM; // 768px
+}
+
+.stacked-block-with-space {
+  display: block;
+  margin: @space 0;
+  padding: 0 @space;
+}
+
+// inline list
+.inline-ul {
+	display: inline;
+	list-style-type: none;
+  padding: 0;
+	& > li {
+		display: inline;
+	}
+}

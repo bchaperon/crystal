@@ -1,0 +1,77 @@
+@import "common.lessimport";
+
+
+.embedded-deck > .mini-deck,
+.embedded-deck > .footer {
+  margin: 0 auto;
+  max-width: @widthM;
+}
+
+.mini-deck-image {
+  display: none;
+  margin: 0 0 @space 0;
+}
+
+.mini-deck-card-list {
+	margin: 0 0 @space 0;
+  padding: 0;
+  width: 100%;
+  .boxSizingBorderBox();
+  
+  list-style-type: none;
+  
+	border-collapse: collapse;  
+	li {
+		padding: 0.2em @smallSpace;
+	}
+}
+
+.mini-deck-stats {
+  border-bottom: @borderStyle;
+}
+
+
+// 2 columns
+@media (min-width: @widthXS) {
+  .mini-deck-card-list, .mini-deck-stats {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+  
+  .mini-deck-stats {
+    border-left: @borderStyle;
+    .boxSizingBorderBox();
+  }
+}
+
+// 3 columns
+@media (min-width: @widthS) {
+  .mini-deck-image, .mini-deck-card-list, .mini-deck-stats {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.3%;
+  }
+}
+
+// still 3 columns, but the mini has reach its max width
+// so we add a right border
+@media (min-width: @widthM) {
+  .mini-deck-stats {
+    border-right: @borderStyle;
+  }
+}
+
+// 1 column again
+@media (min-width: @widthXL) {
+  .deck-builder-container {
+    .mini-deck-image, .mini-deck-card-list, .mini-deck-stats {
+      width: 100%;
+    }
+  
+    .mini-deck-stats {
+      border-right: none;
+      border-left: none;
+    }
+  }
+}

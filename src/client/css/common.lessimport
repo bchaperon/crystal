@@ -1,0 +1,57 @@
+
+// space sizes
+@smallSpace: 0.25em;
+@space: 0.5em;
+@bigSpace: 1em;
+
+// card sizes
+@cardWidth: 14.375em;  // 230px;
+@cardHeight: 20em;     // 320px;
+@maxCardWidth: 21.5em; // 344px;
+@maxCardHeight: 30em;  // 480px;
+
+@deckInfoWidth: @cardWidth;
+
+// screen width
+@widthXS: 22.5em; //  360px 
+@widthS:  35.5em; //  568px
+@widthM:  48em;   //  768px
+@widthL:  64em;   // 1024px
+@widthXL: 75em;   // 1200px
+
+// the colors
+@bodyBackgroundColor: white;
+@lightColor: #E5E7E1;
+@hoverColor: #C8CFB4;
+@darkColor: #5C604D;
+@textOnDarkColor: white;
+@errorColor: #F20056; // red
+
+// a simple border
+@borderStyle: 1px solid @darkColor;
+
+
+//-----------------------------------------------
+// des mixins utiles
+
+.boxSizingBorderBox() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.borderRadius (@radius: 0.5em) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.borderRadiusEx (@r1, @r2, @r3, @r4) {
+  -webkit-border-radius: @r1 @r2 @r3 @r4;
+  -moz-border-radius: @r1 @r2 @r3 @r4;
+  -ms-border-radius: @r1 @r2 @r3 @r4;
+  -o-border-radius: @r1 @r2 @r3 @r4;
+  border-radius: @r1 @r2 @r3 @r4;
+}

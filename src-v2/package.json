@@ -1,0 +1,21 @@
+{
+  "name": "crystal",
+  "version": "1.0.0",
+  "description": "Shadow Era card list and deck builder",
+  "repository": "foo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deku": "^2.0.0-rc16",
+    "gator": "^1.2.4",
+    "page": "^1.6.4",
+    "ramda": "^0.19.1",
+    "redux": "^3.0.5",
+    "redux-logger": "^2.3.1",
+    "redux-thunk": "^1.0.3"
+  }
+}

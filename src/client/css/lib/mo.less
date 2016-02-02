@@ -1,0 +1,41 @@
+@import "../common.lessimport";
+
+// mo : media object
+// inside a container, we put with an image and a content area
+
+.mo-container {
+  display: block;
+  max-width: @widthS;
+  margin: @space auto;
+}
+
+.mo-content {
+  display: block;
+}
+
+.mo-image {
+  display: block;
+  width: 100%;
+  max-width: @maxCardWidth;
+  height: auto;
+  margin: @space auto;
+  .borderRadius();
+}
+
+@media (min-width: @widthM) {
+  .mo-container {
+    max-width: @widthL;
+  }
+  
+  .mo-content {
+    float: right;
+    width: 65%;
+    .boxSizingBorderBox();
+    padding-left: @space;
+  }
+  
+  .mo-image {
+    width: 35%;
+    margin: 0;
+  }
+}

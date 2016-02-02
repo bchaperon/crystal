@@ -1,0 +1,27 @@
+@import "common.lessimport";
+
+@size: 2.5em;
+
+.scroll-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 999;
+  //width: @size;
+  //height: @size;
+
+  padding: 0 @space;
+  font-size: 2.5em;
+  //line-height: @size;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: @lightColor;
+  .borderRadius(0.2em);
+
+  background-color: #323136;
+  &:hover, &:focus {
+    color: white;
+  }
+}

@@ -1,0 +1,32 @@
+@import "common.lessimport";
+
+@media (min-width: @widthS) {
+  .card-details-table {
+    tbody {
+      border-right: @borderStyle;
+      border-left: @borderStyle;
+    }
+  }
+}
+
+@media (min-width: @widthM) {
+  .card-details-container {
+    padding-right: @space;
+    padding-left: @space;
+  }
+}
+
+.card-details-navigation {
+  width: 100%;
+  margin: @bigSpace 0;
+  
+  td {
+    padding: 0 @space;
+  }
+  .previous-card-cell {
+    text-align: left;
+  }
+  .next-card-cell {
+    text-align: right;
+  }
+}

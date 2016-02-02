@@ -1,0 +1,21 @@
+@import 'common.import.less';
+
+.std-table {
+  width: 100%;
+  box-sizing: border-box;
+  
+  th {
+    padding: 0.5em;
+    background-color: @primary-color-dark;
+    color: white;
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background-color: @primary-color-clear;
+    }
+    td {
+      padding: 0.5em 0.2em;
+    }
+  }
+}

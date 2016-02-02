@@ -1,0 +1,42 @@
+@import "common.lessimport";
+
+@barWidth: 600px;
+@barHeight: 30px;
+
+.loading {
+  margin: 0 auto;
+  padding: @bigSpace @space;
+  max-width: @widthM;
+}
+
+.progress-bar {
+  position: relative;
+  width: @barWidth;
+  height: @barHeight;
+  
+  margin: @bigSpace 0;
+  border: @darkColor 1px solid;
+  
+  overflow: hidden
+}
+
+.inner-progress-bar {
+  //float:left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: @barHeight;
+  background-color: @lightColor;
+  z-index: 10;
+}
+
+.progress-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: @barWidth;
+  z-index: 20;
+  
+  text-align: center;
+  line-height: @barHeight;
+}

@@ -1,0 +1,40 @@
+TagFilter
+- documenter les tags
+
+AppCache
+
+Card browser
+- performance
+- ajouter un systéme de pagination
+
+Deck builder
+- ask to login to save, auto save when login
+- display card count per tags
+- change hero
+- ajouter des proba : chances d'avoir la carte au tour X (X = casting cost)
+- note and description
+
+My Decks
+- duplicate a deck
+- decks count, filter, sort
+
+Accounts
+- change password
+- delete account
+
+Form
+- disabled submit button while waiting server response
+
+Card details
+- afficher les images alt
+- display compatible heroes
+
+Social
+- gérer une liste de cartes favorites
+- votes et commentaires sur chaque deck
+
+Combo editor
+- enregistrer des combo de 2 ou 3 cartes
+- savoir avec quels heros ils sont compatibles
+- calculer les tags dominants dans un combo
+- deck editor : suggérer des combo en fonction du hero et des cartes déjà ajoutées
